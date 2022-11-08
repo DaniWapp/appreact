@@ -10,7 +10,7 @@ const App = () => {
 
 axios.get(`${API_URL}assets`)
 .then((data)=>{
-  setCriptos(data.data.data);
+  setCriptos(data.data);
 })
 .catch(()=>{
 console.error("Error:",`API_URL: ${import.meta.env.VITE_API_UR}`)
