@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 const App = () => {
 
-  const API_URL = import.meta.env.VITE_API_URL
+  const API_URL = import.meta.e
   const [criptos,setCriptos] = useState()
 
   useEffect(() => {
@@ -12,7 +12,7 @@ fetch(`${API_URL}assets`)
   setCriptos(data.data);
 })
 .catch(()=>{
-console.error("Error:",`${import.meta.env}`)
+console.error("Error:",`${API_URL}assets`)
 })
   },[])
 

@@ -12,7 +12,7 @@ fetch(`${API_URL}assets`)
   setCriptos(data.data);
 })
 .catch(()=>{
-console.error("Error:",`${import.meta.env}`)
+console.error("Error:",`${API_URL}assets`)
 })
   },[])
 
