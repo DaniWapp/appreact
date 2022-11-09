@@ -1,9 +1,7 @@
-import { Navigate, Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import Menu from "./components/Menu"
 
 const App = ()=>{
-
-  if(!localStorage.getItem("tokenDrg")) return <Navigate to="/login"/>
   return(
     <>
     <Menu/>

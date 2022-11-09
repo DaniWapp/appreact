@@ -7,11 +7,8 @@ import Index from './components/Index'
 import Home from "./components/Home"
 import CriptoPage from './components/CriptoPage'
 import Perfil from './components/Perfil'
-import { UserContextProvider } from './context/UserContext'
-import Login from './components/Login'
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <UserContextProvider>
-    <BrowserRouter>
+  <BrowserRouter>
     <Routes>
     <Route path='/' element={<App />} >
         <Route index element={<Home />} />
@@ -21,9 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route index element={<Index />} />
         <Route path=':id' element={<CriptoPage />} />
       </Route>
-      <Route path='/login' element={<Login/>} />
       <Route path='*' element={<Pag404 />} />
     </Routes>
   </BrowserRouter >
-  </UserContextProvider>
 )

@@ -8,7 +8,6 @@ import Home from "./components/Home"
 import CriptoPage from './components/CriptoPage'
 import Perfil from './components/Perfil'
 import { UserContextProvider } from './context/UserContext'
-import Login from './components/Login'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <UserContextProvider>
     <BrowserRouter>
