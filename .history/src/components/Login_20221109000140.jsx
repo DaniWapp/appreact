@@ -17,7 +17,7 @@ const Login = () => {
     const loguear = (e) => {
 
         e.preventDefault()//no submit
-        setError(null)
+setError(null)
 
         if (cargando) {
             console.log("Cargando...");
@@ -69,7 +69,7 @@ const Login = () => {
             {
                 error && <span>{error}</span>
             }
-
+            
         </>
     )
 

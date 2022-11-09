@@ -12,19 +12,14 @@ const Login = () => {
     })
 
     const [cargando, setCargando] = useState(false)
-    const [error, setError] = useState()
 
     const loguear = (e) => {
-
-        e.preventDefault()//no submit
-        setError(null)
-
-        if (cargando) {
+        if(cargando){
             console.log("Cargando...");
-            return
+            return 
 
         }
-
+        e.preventDefault()//no submit
         console.log(user);
         setCargando(true)
         axios.post(`https://reqres.in/api/login`, user)
@@ -39,9 +34,8 @@ const Login = () => {
             .catch(e => {
                 console.log("Error:", e)
                 setCargando(false)
-                setError(e.response.data.error)
             }
-            )
+                )
 
 
     }
@@ -64,12 +58,8 @@ const Login = () => {
                     })
                 }} />
 
-                <input type="submit" value={cargando ? "..." : "Ingresar"} />
+                <input type="submit" value={cargando?"...":"Ingresar"} />
             </form>
-            {
-                error && <span>{error}</span>
-            }
-
         </>
     )
 
